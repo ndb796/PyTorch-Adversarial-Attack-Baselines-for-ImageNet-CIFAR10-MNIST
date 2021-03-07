@@ -47,3 +47,22 @@
 |<b>Average L2 distance</b>|0.2166|0.4328|0.8640|1.7232|3.4283|6.7710|
 |<b>Average MSE</b>|0.00001529|0.00006098|0.00024307|0.00096716|0.00382864|0.01494123|
 |<b>Average Linf distance</b>|0.003922|0.007843|0.015686|0.031373|0.062745|0.125490|
+
+### 3. MNIST Dataset
+
+* The size of adversarial examples: 28 x 28 x 1 (784 parameters)
+* The basic architecture: <b>LeNet</b> (top-1 accuracy: 98.99%)
+
+#### 1) Linf FGSM (Untargeted)
+
+* [Google Colab source code](/PyTorch_FGSM_Adversarial_Attack_using_MNIST_Images.ipynb)
+* Advertorch and Foolbox show almost the same results.
+* Each pixel (parameter) value is between \[0, 1\].
+
+|Epsilon size|1/255|2/255|4/255|8/255|16/255|32/255|
+|-----------------|---|---|---|---|---|---|
+|<b>Robust accuracy</b>|98.86%|98.65%|98.19%|96.88%|91.80%|61.40%|
+|<b>Average L0 distance</b>|459|459|459|459|459|459|
+|<b>Average L2 distance</b>|0.0839|0.1671|0.3299|0.6554|1.3049|2.5937|
+|<b>Average MSE</b>|0.00000901|0.00003569|0.00013916|0.00054924|0.00217703|0.00860155|
+|<b>Average Linf distance</b>|0.003922|0.007843|0.015686|0.031373|0.062745|0.125490|
