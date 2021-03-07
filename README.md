@@ -10,5 +10,5 @@
 #### ImageNet
 
 * This repository provides a small ImageNet validation dataset of 1,000 classes.
-    * This dataset has 5 images per class (total 5,000 images).
+    * This dataset has 5 images per class (total of 5,000 images).
 * This is a subset of the ImageNet validation dataset.
