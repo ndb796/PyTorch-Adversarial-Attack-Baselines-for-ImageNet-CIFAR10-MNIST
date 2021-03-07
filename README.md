@@ -29,6 +29,19 @@
 |<b>Average MSE</b>|0.00001518|0.00006047|0.00024037|0.00095245|0.00374475|0.01444550|
 |<b>Average Linf distance</b>|0.003922|0.007843|0.015686|0.031373|0.062745|0.125490|
 
+#### 2) Linf PGD (Untargeted)
+
+* [Google Colab source code]()
+* Each pixel (parameter) value is between \[0, 1\].
+
+|Epsilon size|1/255 (4-step)|1/255 (7-step)|2/255 (4-step)|2/255 (7-step)|4/255 (7-step)|
+|-----------------|---|---|---|---|---|
+|<b>Robust accuracy</b>|0.96%|0.52%|0.10%|0.06%|0.02%|
+|<b>Average L0 distance</b>|145509|148809|142349|147741|147280|
+|<b>Average L2 distance</b>|1.1729|1.1456|2.2163|2.1242|4.0154|
+|<b>Average MSE</b>|0.00000915|0.00000874|0.00003265|0.00003002|0.00010718|
+|<b>Average Linf distance</b>|0.003922|0.003922|0.007843|0.007843|0.015686|
+
 ### 2. CIFAR10 Dataset
 
 * The size of adversarial examples: 32 x 32 x 3 (3,072 parameters)
