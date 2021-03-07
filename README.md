@@ -10,7 +10,7 @@
 ### 1. ImageNet Dataset
 
 * This repository provides a small ImageNet validation dataset of 1,000 classes.
-    * This dataset has 5 images per class (total of 5,000 images).
+    * This dataset has 5 images per class (total 5,000 images).
 * This is a subset of the ImageNet validation dataset.
 * The size of adversarial examples: 224 x 224 x 3 (150,528 parameters)
 * The basic architecture: ResNet-50 (top-1 accuracy: 76.06%)
@@ -18,7 +18,7 @@
 #### 1) Linf FGSM (Untargeted)
 
 * [Google Colab source code](/PyTorch_FGSM_Adversarial_Attack_using_ImageNet_Images.ipynb)
-* Advertorch and Foolbox shows almost same results.
+* Advertorch and Foolbox show almost the same results.
 
 |Epsilon size|1/255|2/255|4/255|8/255|16/255|32/255|
 |-----------------|---|---|---|---|---|---|
@@ -36,7 +36,7 @@
 #### 1) Linf FGSM (Untargeted)
 
 * [Google Colab source code](/PyTorch_FGSM_Adversarial_Attack_using_CIFAR10_Images.ipynb)
-* Advertorch and Foolbox shows almost same results.
+* Advertorch and Foolbox show almost the same results.
 
 |Epsilon size|1/255|2/255|4/255|8/255|16/255|32/255|
 |-----------------|---|---|---|---|---|---|
