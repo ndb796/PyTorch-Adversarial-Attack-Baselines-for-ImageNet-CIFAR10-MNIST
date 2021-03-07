@@ -19,6 +19,7 @@
 
 * [Google Colab source code](/PyTorch_FGSM_Adversarial_Attack_using_ImageNet_Images.ipynb)
 * Advertorch and Foolbox show almost the same results.
+* Each pixel value is between \[0, 1\].
 
 |Epsilon size|1/255|2/255|4/255|8/255|16/255|32/255|
 |-----------------|---|---|---|---|---|---|
@@ -37,6 +38,7 @@
 
 * [Google Colab source code](/PyTorch_FGSM_Adversarial_Attack_using_CIFAR10_Images.ipynb)
 * Advertorch and Foolbox show almost the same results.
+* Each pixel value is between \[0, 1\].
 
 |Epsilon size|1/255|2/255|4/255|8/255|16/255|32/255|
 |-----------------|---|---|---|---|---|---|
