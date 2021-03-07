@@ -1,4 +1,4 @@
-### PyTorch Adversarial Attack Baselines for ImageNet, CIFAR10, and MNIST
+## PyTorch Adversarial Attack Baselines for ImageNet, CIFAR10, and MNIST
 
 > PyTorch adversarial attack baselines for ImageNet, CIFAR10, and MNIST (state-of-the-art attacks comparison)
 
@@ -7,8 +7,22 @@
     * This repository utilizes attack libraries such as [Advertorch](https://github.com/BorealisAI/advertorch), [Foolbox](https://github.com/BorealisAI/advertorch), etc.
 * If you have questions about this repository, please send an e-mail to me (dongbinna@postech.ac.kr) or make an issue.
 
-#### ImageNet
+### ImageNet
 
 * This repository provides a small ImageNet validation dataset of 1,000 classes.
     * This dataset has 5 images per class (total of 5,000 images).
 * This is a subset of the ImageNet validation dataset.
+* The size of adversarial examples: 224 x 224 x 3 (150,528 parameters)
+
+#### 1. Linf FGSM (Untargeted)
+
+* [Google Colab source code](/PyTorch_FGSM_Adversarial_Attack_using_ImageNet_Images.ipynb)
+* Advertorch and Foolbox shows almost same results.
+
+|Epsilon size|1/255|2/255|4/255|8/255|16/255|32/255|
+|-----------------|---|---|---|---|---|---|
+|<b>Robust Accuracy</b>|10.96%|6.34%|5.40%|6.86%|8.98%|7.36%|
+|<b>Average L0 distance</b>|148600|148600|148600|148600|148600|148600|
+|<b>Average L2 distance</b>|1.5113|3.0161|6.0128|11.9674|23.7250|46.5814|
+|<b>Average MSE</b>|0.00001518|0.00006047|0.00024037|0.00095245|0.00374475|0.01444550|
+|<b>Average Linf distance</b>|0.003922|0.007843|0.015686|0.031372|0.062745|0.125490|
