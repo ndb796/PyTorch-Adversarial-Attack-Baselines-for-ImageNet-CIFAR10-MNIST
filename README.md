@@ -7,6 +7,14 @@
     * This repository utilizes attack libraries such as [Advertorch](https://github.com/BorealisAI/advertorch), [Foolbox](https://github.com/BorealisAI/advertorch), etc.
 * If you have questions about this repository, please send an e-mail to me (dongbinna@postech.ac.kr) or make an issue.
 
+### What does the distance metric mean?
+
+* Generally, each pixel value is normalized between \[0, 1\].
+* A perturbation with L0 norm of 1,000 could change 1,000 pixels (the number of changed pixels).
+* A perturbation with L2 norm of 1.0 could change one pixel by 255, ten pixels by 80, 100 pixels by 25, or 1000 pixels by 8.
+* A perturbation with Linf norm of 0.003922 could change all pixels by 1 (the maximum changeable amount of each pixel).
+* A perturbation with MSE of 0.001 or lower generally seems imperceptible to humans.
+
 ### 1. ImageNet Dataset
 
 * This repository provides a small ImageNet validation dataset of 1,000 classes.
@@ -19,7 +27,7 @@
 
 * [Google Colab source code](/PyTorch_FGSM_Adversarial_Attack_using_ImageNet_Images.ipynb)
 * Advertorch and Foolbox show almost the same results.
-* Each pixel (parameter) value is between \[0, 1\].
+* Each pixel (parameter) value is normalized between \[0, 1\].
 
 |Epsilon size|1/255|2/255|4/255|8/255|16/255|32/255|
 |-----------------|---|---|---|---|---|---|
@@ -32,7 +40,7 @@
 #### 2) Linf PGD (Untargeted)
 
 * [Google Colab source code](/PyTorch_Linf_PGD_Untargeted_Attack_using_ImageNet_Images.ipynb)
-* Each pixel (parameter) value is between \[0, 1\].
+* Each pixel (parameter) value is normalized between \[0, 1\].
 
 |Epsilon size|1/255 (4-step)|1/255 (7-step)|2/255 (4-step)|2/255 (7-step)|4/255 (7-step)|
 |-----------------|---|---|---|---|---|
@@ -51,7 +59,7 @@
 
 * [Google Colab source code](/PyTorch_FGSM_Adversarial_Attack_using_CIFAR10_Images.ipynb)
 * Advertorch and Foolbox show almost the same results.
-* Each pixel (parameter) value is between \[0, 1\].
+* Each pixel (parameter) value is normalized between \[0, 1\].
 
 |Epsilon size|1/255|2/255|4/255|8/255|16/255|32/255|
 |-----------------|---|---|---|---|---|---|
@@ -70,7 +78,7 @@
 
 * [Google Colab source code](/PyTorch_FGSM_Adversarial_Attack_using_MNIST_Images.ipynb)
 * Advertorch and Foolbox show almost the same results.
-* Each pixel (parameter) value is between \[0, 1\].
+* Each pixel (parameter) value is normalized between \[0, 1\].
 
 |Epsilon size|1/255|2/255|4/255|8/255|16/255|32/255|
 |-----------------|---|---|---|---|---|---|
