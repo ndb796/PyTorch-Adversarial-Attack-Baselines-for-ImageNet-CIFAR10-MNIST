@@ -21,7 +21,7 @@
     * This dataset has 5 images per class (total 5,000 images).
 * This is a subset of the ImageNet validation dataset.
 * The size of adversarial examples: 224 x 224 x 3 (150,528 parameters)
-* The basic architecture: <b>ResNet-50</b> (top-1 accuracy: 76.06%)
+* The basic architecture: <b>ResNet-50 (top-1 accuracy: 76.06%)</b>
 
 #### 1) Linf FGSM (Untargeted)
 
@@ -70,7 +70,7 @@
 ### 2. CIFAR10 Dataset
 
 * The size of adversarial examples: 32 x 32 x 3 (3,072 parameters)
-* The basic architecture: <b>ResNet-18</b> (top-1 accuracy: 95.28%)
+* The basic architecture: <b>ResNet-18 (top-1 accuracy: 95.28%)</b>
 
 #### 1) Linf FGSM (Untargeted)
 
@@ -89,7 +89,7 @@
 ### 3. MNIST Dataset
 
 * The size of adversarial examples: 28 x 28 x 1 (784 parameters)
-* The basic architecture: <b>LeNet</b> (top-1 accuracy: 98.99%)
+* The basic architecture: <b>LeNet (top-1 accuracy: 98.99%)</b>
 
 #### 1) Linf FGSM (Untargeted)
 
