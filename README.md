@@ -40,15 +40,32 @@
 #### 2) Linf PGD (Untargeted)
 
 * [Google Colab source code](/PyTorch_Linf_PGD_Untargeted_Attack_using_ImageNet_Images.ipynb)
+* Advertorch and Foolbox show almost the same results.
 * Each pixel (parameter) value is normalized between \[0, 1\].
+* PGD attack is the 7-step PGD attack.
 
-|Epsilon size|1/255 (4-step)|1/255 (7-step)|2/255 (4-step)|2/255 (7-step)|4/255 (7-step)|
-|-----------------|---|---|---|---|---|
-|<b>Robust accuracy</b>|0.96%|0.52%|0.10%|0.06%|0.02%|
-|<b>Average L0 distance</b>|145509|148809|142349|147741|147280|
-|<b>Average L2 distance</b>|1.1729|1.1456|2.2163|2.1242|4.0154|
-|<b>Average MSE</b>|0.00000915|0.00000874|0.00003265|0.00003002|0.00010718|
-|<b>Average Linf distance</b>|0.003922|0.003922|0.007843|0.007843|0.015686|
+|Epsilon size|1/255|2/255|4/255|8/255|16/255|32/255|
+|-----------------|---|---|---|---|---|---|
+|<b>Robust accuracy</b>|0.56%|0.06%|0.02%|0.02%|0.00%|0.00%|
+|<b>Average L0 distance</b>|148808|147740|147280|147590|147956|148511|
+|<b>Average L2 distance</b>|1.1457|2.1242|4.0156|7.7791|15.2752|29.9894|
+|<b>Average MSE</b>|0.00000874|0.00003002|0.00010719|0.00040217|0.00155080|0.00597913|
+|<b>Average Linf distance</b>|0.003922|0.007843|0.015686|0.031373|0.062745|0.125490|
+
+#### 3) L2 PGD (Untargeted)
+
+* [Google Colab source code](/PyTorch_L2_PGD_Untargeted_Attack_using_ImageNet_Images.ipynb)
+* Advertorch and Foolbox show almost the same results.
+* Each pixel (parameter) value is normalized between \[0, 1\].
+* PGD attack is the 7-step PGD attack.
+
+|Epsilon size|0.25|0.5|1.0|2.0|4.0|8.0|
+|-----------------|---|---|---|---|---|---|
+|<b>Robust accuracy</b>|23.56%|5.78%|0.76%|0.14%|0.08%|0.06%|
+|<b>Average L0 distance</b>|149952|150033|150127|150197|150236|150262|
+|<b>Average L2 distance</b>|0.25|0.5|1.0|2.0|4.0|8.0|
+|<b>Average MSE</b>|0.00000041|0.00000166|0.00000664|0.00002657|0.00010629|0.00042517|
+|<b>Average Linf distance</b>|0.009559|0.016910|0.029153|0.050194|0.088268|0.156057|
 
 ### 2. CIFAR10 Dataset
 
