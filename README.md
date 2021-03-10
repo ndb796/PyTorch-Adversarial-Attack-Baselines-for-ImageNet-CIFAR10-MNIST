@@ -86,6 +86,36 @@
 |<b>Average MSE</b>|0.00001529|0.00006098|0.00024307|0.00096716|0.00382864|0.01494123|
 |<b>Average Linf distance</b>|0.003922|0.007843|0.015686|0.031373|0.062745|0.125490|
 
+#### 2) Linf PGD (Untargeted)
+
+* [Google Colab source code](/PyTorch_Linf_PGD_Untargeted_Attack_using_CIFAR10_Images.ipynb)
+* Advertorch and Foolbox show almost the same results.
+* Each pixel (parameter) value is normalized between \[0, 1\].
+* PGD attack is the 7-step PGD attack.
+
+|Epsilon size|1/255|2/255|4/255|8/255|16/255|32/255|
+|-----------------|---|---|---|---|---|---|
+|<b>Robust accuracy</b>|51.26%|26.75%|8.28%|1.04%|0.08%|0.00%|
+|<b>Average L0 distance</b>|3047|3011|3001|3015|3029|3042|
+|<b>Average L2 distance</b>|0.1867|0.3461|0.6319|1.1733|2.2501|4.4030|
+|<b>Average MSE</b>|0.00001362|0.00003906|0.00013022|0.00044856|0.00164901|0.00631511|
+|<b>Average Linf distance</b>|0.003922|0.007843|0.015686|0.031373|0.062745|0.125490|
+
+#### 3) L2 PGD (Untargeted)
+
+* [Google Colab source code](/PyTorch_L2_PGD_Untargeted_Attack_using_CIFAR10_Images.ipynb)
+* Advertorch and Foolbox show almost the same results.
+* Each pixel (parameter) value is normalized between \[0, 1\].
+* PGD attack is the 7-step PGD attack.
+
+|Epsilon size|0.25|0.5|1.0|2.0|4.0|8.0|
+|-----------------|---|---|---|---|---|---|
+|<b>Robust accuracy</b>|31.74%|13.56%|2.38%|0.13%|0.00%|0.00%|
+|<b>Average L0 distance</b>|3066|3067|3068|3069|3069|3069|
+|<b>Average L2 distance</b>|0.25|0.5|1.0|2.0|4.0|8.0|
+|<b>Average MSE</b>|0.00002035|0.00008138|0.00032551|0.00130208|0.00520833|0.02083333|
+|<b>Average Linf distance</b>|0.025261|0.043822|0.077334|0.141376|0.267958|0.523127|
+
 ### 3. MNIST Dataset
 
 * The size of adversarial examples: 28 x 28 x 1 (784 parameters)
