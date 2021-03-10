@@ -134,3 +134,33 @@
 |<b>Average L2 distance</b>|0.0839|0.1671|0.3299|0.6554|1.3049|2.5937|
 |<b>Average MSE</b>|0.00000901|0.00003569|0.00013916|0.00054924|0.00217703|0.00860155|
 |<b>Average Linf distance</b>|0.003922|0.007843|0.015686|0.031373|0.062745|0.125490|
+
+#### 2) Linf PGD (Untargeted)
+
+* [Google Colab source code](/PyTorch_Linf_PGD_Untargeted_Attack_using_MNIST_Images.ipynb)
+* Advertorch and Foolbox show almost the same results.
+* Each pixel (parameter) value is normalized between \[0, 1\].
+* PGD attack is the 7-step PGD attack.
+
+|Epsilon size|1/255|2/255|4/255|8/255|16/255|32/255|
+|-----------------|---|---|---|---|---|---|
+|<b>Robust accuracy</b>|98.86%|98.65%|98.16%|96.73%|90.79%|46.27%|
+|<b>Average L0 distance</b>|495|496|499|503|509|518|
+|<b>Average L2 distance</b>|0.0830|0.1650|0.3258|0.6460|1.2826|2.5349|
+|<b>Average MSE</b>|0.00000881|0.00003484|0.00013578|0.00053386|0.00210479|0.00822191|
+|<b>Average Linf distance</b>|0.003922|0.007843|0.015686|0.031373|0.062745|0.125490|
+
+#### 3) L2 PGD (Untargeted)
+
+* [Google Colab source code](/PyTorch_L2_PGD_Untargeted_Attack_using_MNIST_Images.ipynb)
+* Advertorch and Foolbox show almost the same results.
+* Each pixel (parameter) value is normalized between \[0, 1\].
+* PGD attack is the 7-step PGD attack.
+
+|Epsilon size|0.25|0.5|1.0|2.0|4.0|8.0|
+|-----------------|---|---|---|---|---|---|
+|<b>Robust accuracy</b>|97.91%|96.06%|86.44%|26.70%|0.10%|0.00%|
+|<b>Average L0 distance</b>|672|672|672|672|670|673|
+|<b>Average L2 distance</b>|0.25|0.5|1.0|2.0|4.0|8.0|
+|<b>Average MSE</b>|0.00007970|0.00031879|0.00127532|0.00510183|0.02040816|0.08163265|
+|<b>Average Linf distance</b>|0.045673|0.092980|0.190897|0.391071|0.752917|0.914406|
