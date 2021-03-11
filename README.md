@@ -89,7 +89,7 @@
 * Each pixel (parameter) value is normalized between \[0, 1\].
 * We set the binary search steps to 4.
 * We assign a random target label to each original image.
-* The attack success rate denotes whether the adversarial example is classified as a target class.
+* The attack success rate only counts the case the adversarial example is classified as a target class.
 
 |Number of iterations|100|
 |-----------------|---|
@@ -105,7 +105,7 @@
 * The Foolbox provides a Boundary Attack implementation.
 * Each pixel (parameter) value is normalized between \[0, 1\].
 * The basic untargeted method includes Blended Uniform Noise Attack as a default for the initialization.
-    * The minimization attack finds a noise that is not classified as a original class.
+    * This attack finds a noise that is not classified as a original class.
 * Boundary Attack is always successful because the result images are always adversarial.
 
 |Number of iterations|100|500|1000|
@@ -122,7 +122,7 @@
 * The Foolbox provides a Boundary Attack implementation.
 * Each pixel (parameter) value is normalized between \[0, 1\].
 * We assign a random target image and label to each original image.
-* The attack success rate denotes whether the adversarial example is classified as a target class.
+* The attack success rate only counts the case the adversarial example is classified as a target class.
 * Boundary Attack is always successful because the result images are always adversarial.
 
 |Number of iterations|100|500|1000|3000|
