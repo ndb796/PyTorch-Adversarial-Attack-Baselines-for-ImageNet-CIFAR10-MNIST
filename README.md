@@ -116,7 +116,7 @@
 |<b>Average MSE</b>|0.01487032|0.01322446|0.01143493|
 |<b>Average Linf distance</b>|0.232628|0.215504|0.203864|
 
-#### 7) Boundary Attack (Targeted)
+#### 7) Boundary Attack (Targeted) ▶ Fixing bugs...
 
 * [Google Colab source code](/PyTorch_Targeted_Boundary_Attack_using_ImageNet_Images.ipynb)
 * The Foolbox provides a Boundary Attack implementation.
