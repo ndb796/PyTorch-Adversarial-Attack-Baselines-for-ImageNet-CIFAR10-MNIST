@@ -67,6 +67,72 @@
 |<b>Average MSE</b>|0.00000041|0.00000166|0.00000664|0.00002657|0.00010629|0.00042517|
 |<b>Average Linf distance</b>|0.009559|0.016910|0.029153|0.050194|0.088268|0.156057|
 
+#### 4) L2 CW (Untargeted)
+
+* [Google Colab source code]()
+* Advertorch and Foolbox show almost the same results.
+* Each pixel (parameter) value is normalized between \[0, 1\].
+* We set the binary search steps to 4.
+
+|Number of iterations|100|
+|-----------------|---|
+|<b>Robust accuracy</b>|00.00%|
+|<b>Average L0 distance</b>|148926|
+|<b>Average L2 distance</b>|0.45|
+|<b>Average MSE</b>|0.00000251|
+|<b>Average Linf distance</b>|0.004477|
+
+#### 5) L2 CW (Targeted)
+
+* [Google Colab source code]()
+* Advertorch and Foolbox show almost the same results.
+* Each pixel (parameter) value is normalized between \[0, 1\].
+* We set the binary search steps to 4.
+* We assign a random target label to each original image.
+* The attack success rate denotes whether the adversarial example is classified as a target class.
+
+|Number of iterations|100|
+|-----------------|---|
+|<b>Attack success rate</b>|99.92%|
+|<b>Average L0 distance</b>|148926|
+|<b>Average L2 distance</b>|0.70|
+|<b>Average MSE</b>|0.00000382|
+|<b>Average Linf distance</b>|0.025385|
+
+#### 6) Boundary Attack (Untargeted)
+
+* [Google Colab source code]()
+* The Foolbox provides a Boundary Attack implementation.
+* Each pixel (parameter) value is normalized between \[0, 1\].
+* The basic untargeted method includes Blended Uniform Noise Attack as a default for the initialization.
+    * The minimization attack finds a noise that is not classified as a original class.
+* Boundary Attack is always successful because the result images are always adversarial.
+
+|Number of iterations|100|500|1000|
+|-----------------|---|---|---|
+|<b>Robust accuracy</b>|00.00%|00.00%|00.00%|
+|<b>Average L0 distance</b>|114484|114372|117345|
+|<b>Average L2 distance</b>|36.31|33.34|30.97|
+|<b>Average MSE</b>|0.01487032|0.01322446|0.01143493|
+|<b>Average Linf distance</b>|0.232628|0.215504|0.203864|
+
+#### 7) Boundary Attack (Targeted)
+
+* [Google Colab source code]()
+* The Foolbox provides a Boundary Attack implementation.
+* Each pixel (parameter) value is normalized between \[0, 1\].
+* We assign a random target image and label to each original image.
+* The attack success rate denotes whether the adversarial example is classified as a target class.
+* Boundary Attack is always successful because the result images are always adversarial.
+
+|Number of iterations|100|500|1000|3000|
+|-----------------|---|---|---|---|
+|<b>Attack success rate</b>|100.00%|100.00%|100.00%|100.00%|
+|<b>Average L0 distance</b>|150510|150517|150519|150519|
+|<b>Average L2 distance</b>|93.40|86.72|76.58|53.14|
+|<b>Average MSE</b>|0.06474955|0.05589061|0.044284658|0.02162400|
+|<b>Average Linf distance</b>|0.628562|0.588663|0.536937|0.400996|
+
 ### 2. CIFAR10 Dataset
 
 * The size of adversarial examples: 32 x 32 x 3 (3,072 parameters)
