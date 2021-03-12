@@ -116,7 +116,7 @@
 |<b>Average MSE</b>|0.01487032|0.01322446|0.01143493|
 |<b>Average Linf distance</b>|0.232628|0.215504|0.203864|
 
-#### 7) Boundary Attack (Targeted) ▶ Fixing bugs...
+#### 7) Boundary Attack (Targeted)
 
 * [Google Colab source code](/PyTorch_Targeted_Boundary_Attack_using_ImageNet_Images.ipynb)
 * The Foolbox provides a Boundary Attack implementation.
@@ -125,13 +125,13 @@
 * The attack success rate only counts the case the adversarial example is classified as a target class.
 * Boundary Attack is always successful because the result images are always adversarial.
 
-|Number of iterations|100|500|1000|3000|
-|-----------------|---|---|---|---|
-|<b>Attack success rate</b>|100.00%|100.00%|100.00%|100.00%|
-|<b>Average L0 distance</b>|150510|150517|150519|150519|
-|<b>Average L2 distance</b>|93.40|86.72|76.58|53.14|
-|<b>Average MSE</b>|0.06474955|0.05589061|0.044284658|0.02162400|
-|<b>Average Linf distance</b>|0.628562|0.588663|0.536937|0.400996|
+|Number of iterations|100|500|1000|3000|5000|
+|-----------------|---|---|---|---|---|
+|<b>Attack success rate</b>|100.00%|100.00%|100.00%|100.00%|100.00%|
+|<b>Average L0 distance</b>|150510|150517|150519|150519|150521|
+|<b>Average L2 distance</b>|93.40|86.72|76.58|53.14|41.63|
+|<b>Average MSE</b>|0.06474955|0.05589061|0.044284658|0.02162400|0.01335199|
+|<b>Average Linf distance</b>|0.628562|0.588663|0.536937|0.400996|0.337554|
 
 ### 2. CIFAR10 Dataset
 
