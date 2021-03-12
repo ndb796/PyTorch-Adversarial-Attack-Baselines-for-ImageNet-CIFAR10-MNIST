@@ -199,6 +199,24 @@
 |<b>Average MSE</b>|0.03306946|0.01989065|0.01330044|0.00196387|0.00054490|0.00008164|
 |<b>Average Linf distance</b>|0.440098|0.344276|0.286082|0.110370|0.061091|0.032690|
 
+#### 5) HopSkipJump Attack (Targeted)
+
+* [Google Colab source code](/PyTorch_Targeted_HopSkipJump_Attack_using_CIFAR10_Images.ipynb)
+* The Foolbox provides a HopSkipJump Attack implementation.
+* Each pixel (parameter) value is normalized between \[0, 1\].
+* We assign a random target image and label to each original image.
+* The attack success rate only counts the case the adversarial example is classified as a target class.
+* HopSkipJump Attack is always successful because the result images are always adversarial.
+* Each iteration includes 100 gradient approximation steps.
+
+|Number of iterations|10|30|50|
+|-----------------|---|---|---|
+|<b>Attack success rate</b>|100.00%|100.00%|100.00%|
+|<b>Average L0 distance</b>|3065|3059|3059|
+|<b>Average L2 distance</b>|3.33|1.79|1.32|
+|<b>Average MSE</b>|0.00402476|0.00115264|0.00062992|
+|<b>Average Linf distance</b>|0.166263|0.093042|0.070633|
+
 ### 3. MNIST Dataset
 
 * The size of adversarial examples: 28 x 28 x 1 (784 parameters)
